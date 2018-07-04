@@ -8,7 +8,7 @@
     <modules>
         <module>tomcat-server</module>
         <module>jetty-server</module>
-        <module>common-servlets</module>
+        <module>core</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -28,9 +28,15 @@
 
             <dependency>
                 <groupId>com.github.dizzarg.simple.http.server</groupId>
-                <artifactId>common-servlets</artifactId>
+                <artifactId>web</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.github.dizzarg.simple.http.server</groupId>
+                <artifactId>auth</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>org.eclipse.jetty</groupId>
@@ -48,6 +54,11 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
                 <version>3.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>1.4.197</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.tomcat.embed</groupId>

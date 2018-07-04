@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>com.github.dizzarg.simple.http.server</groupId>
-            <artifactId>common-servlets</artifactId>
+            <artifactId>web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -45,7 +45,7 @@
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                     <outputDirectory>${basedir}</outputDirectory>
-                    <finalName>simple-tomcat-http-server</finalName>
+                    <finalName>server</finalName>
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>

@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>com.github.dizzarg.simple.http.server</groupId>
-            <artifactId>common-servlets</artifactId>
+            <artifactId>web</artifactId>
         </dependency>
 
         <dependency>
