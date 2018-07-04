@@ -19,10 +19,10 @@ fi
 
 case $1 in
     "jetty" )
-        java -Dhttp.port=$port -jar jetty-server/simple-jetty-http-server.jar
+        java -Dhttp.port=$port -jar build/jetty-server.jar
     ;;
     "tomcat" )
-        java -Dhttp.port=$port -jar tomcat-server/simple-tomcat-http-server.jar
+        java -Dhttp.port=$port -jar build/tomcat-server.jar
     ;;
     *)
         echo "Unknown server '$1'. Support servers is tomcat and jetty"

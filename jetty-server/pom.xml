@@ -7,11 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>simple-jetty-http-server</artifactId>
+    <artifactId>jetty-server</artifactId>
     <packaging>jar</packaging>
 
-    <name>simple-jetty-http-server</name>
-    <url>http://maven.apache.org</url>
+    <name>jetty-server</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -47,8 +46,8 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-                    <outputDirectory>${basedir}</outputDirectory>
-                    <finalName>simple-jetty-http-server</finalName>
+                    <outputDirectory>${maven.multiModuleProjectDirectory}/build</outputDirectory>
+                    <finalName>${name}</finalName>
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
