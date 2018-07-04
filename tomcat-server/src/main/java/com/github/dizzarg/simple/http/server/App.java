@@ -18,9 +18,7 @@ public class App {
         Tomcat tomcat = new Tomcat();
         tomcat.setPort(Integer.getInteger("http.port", 8080));
 
-
-        String tmpPath = File.createTempFile("tomcat", "simple").getAbsolutePath();
-        Context ctx = tomcat.addContext("/", tmpPath);
+        Context ctx = tomcat.addContext("/", new File(".").getAbsolutePath());
 
         Tomcat.addServlet(ctx, "signin", signInServlet);
         ctx.addServletMapping("/signin", "signin");

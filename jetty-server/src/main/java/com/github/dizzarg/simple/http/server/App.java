@@ -22,7 +22,6 @@ public class App {
         server.setHandler(context);
 
         server.start();
-        System.out.println("Server started");
         server.join();
     }
 }
