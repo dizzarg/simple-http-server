@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Objects;
 
 public class SignInServlet extends HttpServlet {
 
@@ -15,15 +16,18 @@ public class SignInServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse response) throws IOException {
-        String login = req.getParameter("login");
-        String password = req.getParameter("password");
-        response.setContentType("text/html;charset=utf-8");
-        if (accountService.signin(login, password)) {
-            response.getWriter().write("Authorized: " + login);
+        String login = req.getParameter(HttpConstants.LOGIN_PARAM);
+        String password = req.getParameter(HttpConstants.PASSWORD_PARAM);
+        response.setContentType(HttpConstants.CONTENT_TYPE);
+        if (isAuth(login, password)) {
             response.setStatus(HttpServletResponse.SC_OK);
         } else {
-            response.getWriter().write("Unauthorized");
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         }
+    }
+
+    private boolean isAuth(String login, String password) {
+        return !(Objects.isNull(login) || Objects.isNull(password)) &&
+                accountService.signin(login, password);
     }
 }

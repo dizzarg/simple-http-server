@@ -14,9 +14,9 @@ public class SignUpServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse response) {
-        String login = req.getParameter("login");
-        String password = req.getParameter("password");
-        response.setContentType("text/html;charset=utf-8");
+        String login = req.getParameter(HttpConstants.LOGIN_PARAM);
+        String password = req.getParameter(HttpConstants.PASSWORD_PARAM);
+        response.setContentType(HttpConstants.CONTENT_TYPE);
         accountService.signup(login, password);
         response.setStatus(HttpServletResponse.SC_OK);
     }
