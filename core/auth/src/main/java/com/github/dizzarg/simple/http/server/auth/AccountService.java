@@ -1,4 +1,4 @@
-package com.github.dizzarg.simple.http.server.servlets;
+package com.github.dizzarg.simple.http.server.auth;
 
 import java.sql.SQLException;
 

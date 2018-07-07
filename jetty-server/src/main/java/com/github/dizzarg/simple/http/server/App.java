@@ -1,6 +1,6 @@
 package com.github.dizzarg.simple.http.server;
 
-import com.github.dizzarg.simple.http.server.servlets.AccountService;
+import com.github.dizzarg.simple.http.server.auth.AccountService;
 import com.github.dizzarg.simple.http.server.servlets.SignInServlet;
 import com.github.dizzarg.simple.http.server.servlets.SignUpServlet;
 import org.eclipse.jetty.server.Server;

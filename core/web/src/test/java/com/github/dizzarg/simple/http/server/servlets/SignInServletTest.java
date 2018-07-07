@@ -1,5 +1,6 @@
 package com.github.dizzarg.simple.http.server.servlets;
 
+import com.github.dizzarg.simple.http.server.auth.AccountService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;

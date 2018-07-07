@@ -1,5 +1,7 @@
 package com.github.dizzarg.simple.http.server.servlets;
 
+import com.github.dizzarg.simple.http.server.auth.AccountService;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
