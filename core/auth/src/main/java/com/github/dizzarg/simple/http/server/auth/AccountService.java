@@ -1,5 +1,7 @@
 package com.github.dizzarg.simple.http.server.auth;
 
+import com.github.dizzarg.simple.http.server.db.DBService;
+
 import java.sql.SQLException;
 
 public class AccountService {

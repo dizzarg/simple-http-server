@@ -36,6 +36,11 @@
                 <artifactId>auth</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.github.dizzarg.simple.http.server</groupId>
+                <artifactId>db</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
 
             <dependency>

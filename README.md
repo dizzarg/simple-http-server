@@ -31,18 +31,19 @@ The pet project. It demonstrates servlets container in embedded tomcat and jetty
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Summary:
 [INFO] 
-[INFO] simple-http-server ................................. SUCCESS [  0.174 s]
+[INFO] simple-http-server ................................. SUCCESS [  0.188 s]
 [INFO] core ............................................... SUCCESS [  0.002 s]
-[INFO] auth ............................................... SUCCESS [  1.604 s]
-[INFO] web ................................................ SUCCESS [  1.621 s]
-[INFO] tomcat-server ...................................... SUCCESS [  1.597 s]
-[INFO] jetty-server ....................................... SUCCESS [  1.301 s]
+[INFO] db ................................................. SUCCESS [  1.857 s]
+[INFO] auth ............................................... SUCCESS [  0.099 s]
+[INFO] web ................................................ SUCCESS [  2.001 s]
+[INFO] tomcat-server ...................................... SUCCESS [  2.430 s]
+[INFO] jetty-server ....................................... SUCCESS [  2.066 s]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 6.460 s
-[INFO] Finished at: 2018-07-06T09:53:29+03:00
-[INFO] Final Memory: 59M/403M
+[INFO] Total time: 8.816 s
+[INFO] Finished at: 2018-07-07T22:43:58+03:00
+[INFO] Final Memory: 36M/247M
 [INFO] ------------------------------------------------------------------------
 ```
 

@@ -1,16 +1,18 @@
-package com.github.dizzarg.simple.http.server.auth;
+package com.github.dizzarg.simple.http.server.db;
 
 import org.h2.jdbcx.JdbcDataSource;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DBService {
 
-    String url = "jdbc:h2:./h2db";
-    String name = "test";
-    String pass = "test";
+    // TODO: move to configuration file
+    private String url = "jdbc:h2:./h2db";
+    private String name = "test";
+    private String pass = "test";
     private Connection connection;
 
     public DBService() throws SQLException {
@@ -27,18 +29,18 @@ public class DBService {
     }
 
     public void insert(String login, String password) {
-        try {
-            connection.createStatement().execute("insert into users(login, password) " +
-                    "values ('" + login + "', '" + password + "')");
+        try (PreparedStatement statement = connection.prepareStatement("insert into users(login, password) value (?, ?)")) {
+            statement.setString(1, login);
+            statement.setString(2, password);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
     public String getPassword(String login) {
-        try {
-            ResultSet resultSet = connection.createStatement()
-                    .executeQuery("SELECT password from users where" + " login='" + login + "'");
+        try (PreparedStatement stat = connection.prepareStatement("SELECT password from users where login=?")) {
+            stat.setString(1, login);
+            ResultSet resultSet = stat.executeQuery();
             if (resultSet.next()) {
                 return resultSet.getString("password");
             }

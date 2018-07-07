@@ -14,6 +14,7 @@
     <modules>
         <module>web</module>
         <module>auth</module>
+        <module>db</module>
     </modules>
 
     <packaging>pom</packaging>
