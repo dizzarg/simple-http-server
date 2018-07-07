@@ -19,6 +19,7 @@ The pet project. It demonstrates servlets container in embedded tomcat and jetty
 [INFO] 
 [INFO] simple-http-server
 [INFO] core
+[INFO] db
 [INFO] auth
 [INFO] web
 [INFO] tomcat-server
@@ -50,35 +51,34 @@ The pet project. It demonstrates servlets container in embedded tomcat and jetty
 And then `build` directory which contains built applications is created.  
 
 * Run server:
-    * Run tomcat:  
-```
-% /run.sh start tomcat
-Jul 06, 2018 9:57:06 AM org.apache.catalina.core.StandardContext setPath
-WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
-Jul 06, 2018 9:57:07 AM org.apache.coyote.AbstractProtocol init
-INFO: Initializing ProtocolHandler ["http-nio-18080"]
-Jul 06, 2018 9:57:07 AM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
-INFO: Using a shared selector for servlet write/read
-Jul 06, 2018 9:57:07 AM org.apache.catalina.core.StandardService startInternal
-INFO: Starting service Tomcat
-Jul 06, 2018 9:57:07 AM org.apache.catalina.core.StandardEngine startInternal
-INFO: Starting Servlet Engine: Apache Tomcat/9.0.0.M6
-Jul 06, 2018 9:57:07 AM org.apache.coyote.AbstractProtocol start
-INFO: Starting ProtocolHandler [http-nio-18080]
-```
-
-    * Run jetty:  
-```
-% /run.sh start jetty
-018-07-06 09:58:24.098:INFO::main: Logging initialized @310ms to org.eclipse.jetty.util.log.StdErrLog
-2018-07-06 09:58:24.212:INFO:oejs.Server:main: jetty-9.4.z-SNAPSHOT; built: 2018-06-05T18:24:03.829Z; git: d5fc0523cfa96bfebfbda19606cad384d772f04c; jvm 1.8.0_121-b13
-2018-07-06 09:58:24.248:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
-2018-07-06 09:58:24.248:INFO:oejs.session:main: No SessionScavenger set, using defaults
-2018-07-06 09:58:24.251:INFO:oejs.session:main: node0 Scavenging every 600000ms
-2018-07-06 09:58:24.257:INFO:oejsh.ContextHandler:main: Started o.e.j.s.ServletContextHandler@e720b71{/,null,AVAILABLE}
-2018-07-06 09:58:24.268:INFO:oejs.AbstractConnector:main: Started ServerConnector@c81cdd1{HTTP/1.1,[http/1.1]}{0.0.0.0:18080}
-2018-07-06 09:58:24.268:INFO:oejs.Server:main: Started @482ms
-```
+   * Run tomcat:  
+    ```
+    % /run.sh start tomcat
+    Jul 06, 2018 9:57:06 AM org.apache.catalina.core.StandardContext setPath
+    WARNING: A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+    Jul 06, 2018 9:57:07 AM org.apache.coyote.AbstractProtocol init
+    INFO: Initializing ProtocolHandler ["http-nio-18080"]
+    Jul 06, 2018 9:57:07 AM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+    INFO: Using a shared selector for servlet write/read
+    Jul 06, 2018 9:57:07 AM org.apache.catalina.core.StandardService startInternal
+    INFO: Starting service Tomcat
+    Jul 06, 2018 9:57:07 AM org.apache.catalina.core.StandardEngine startInternal
+    INFO: Starting Servlet Engine: Apache Tomcat/9.0.0.M6
+    Jul 06, 2018 9:57:07 AM org.apache.coyote.AbstractProtocol start
+    INFO: Starting ProtocolHandler [http-nio-18080]
+    ``` 
+   * Run jetty:      
+    ```
+    % /run.sh start jetty
+    018-07-06 09:58:24.098:INFO::main: Logging initialized @310ms to org.eclipse.jetty.util.log.StdErrLog
+    2018-07-06 09:58:24.212:INFO:oejs.Server:main: jetty-9.4.z-SNAPSHOT; built: 2018-06-05T18:24:03.829Z; git: d5fc0523cfa96bfebfbda19606cad384d772f04c; jvm 1.8.0_121-b13
+    2018-07-06 09:58:24.248:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
+    2018-07-06 09:58:24.248:INFO:oejs.session:main: No SessionScavenger set, using defaults
+    2018-07-06 09:58:24.251:INFO:oejs.session:main: node0 Scavenging every 600000ms
+    2018-07-06 09:58:24.257:INFO:oejsh.ContextHandler:main: Started o.e.j.s.ServletContextHandler@e720b71{/,null,AVAILABLE}
+    2018-07-06 09:58:24.268:INFO:oejs.AbstractConnector:main: Started ServerConnector@c81cdd1{HTTP/1.1,[http/1.1]}{0.0.0.0:18080}
+    2018-07-06 09:58:24.268:INFO:oejs.Server:main: Started @482ms
+    ```
 
 * Stop:
 
