@@ -5,11 +5,6 @@
     <groupId>com.github.dizzarg.simple.http.server</groupId>
     <artifactId>simple-http-server</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>tomcat-server</module>
-        <module>jetty-server</module>
-        <module>core</module>
-    </modules>
     <packaging>pom</packaging>
 
     <name>simple-http-server</name>
@@ -22,6 +17,11 @@
         <jetty.server.version>9.4.11.v20180605</jetty.server.version>
         <tomcat.version>9.0.0.M6</tomcat.version>
     </properties>
+
+    <modules>
+        <module>core</module>
+        <module>apps</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
